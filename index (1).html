@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>GALLERY</title>
+        <link href="../dist/css/lightgallery.css" rel="stylesheet">
+        <style type="text/css">
+            body{
+                background-color: #152836
+            }
+            .demo-gallery > ul {
+              margin-bottom: 0;
+            }
+            .demo-gallery > ul > li {
+                float: left;
+                margin-bottom: 15px;
+                margin-right: 20px;
+                width: 200px;
+            }
+            .demo-gallery > ul > li a {
+              border: 3px solid #FFF;
+              border-radius: 3px;
+              display: block;
+              overflow: hidden;
+              position: relative;
+              float: left;
+            }
+            .demo-gallery > ul > li a > img {
+              -webkit-transition: -webkit-transform 0.15s ease 0s;
+              -moz-transition: -moz-transform 0.15s ease 0s;
+              -o-transition: -o-transform 0.15s ease 0s;
+              transition: transform 0.15s ease 0s;
+              -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+              height: 100%;
+              width: 100%;
+            }
+            .demo-gallery > ul > li a:hover > img {
+              -webkit-transform: scale3d(1.1, 1.1, 1.1);
+              transform: scale3d(1.1, 1.1, 1.1);
+            }
+            .demo-gallery > ul > li a:hover .demo-gallery-poster > img {
+              opacity: 1;
+            }
+            .demo-gallery > ul > li a .demo-gallery-poster {
+              background-color: rgba(0, 0, 0, 0.1);
+              bottom: 0;
+              left: 0;
+              position: absolute;
+              right: 0;
+              top: 0;
+              -webkit-transition: background-color 0.15s ease 0s;
+              -o-transition: background-color 0.15s ease 0s;
+              transition: background-color 0.15s ease 0s;
+            }
+            .demo-gallery > ul > li a .demo-gallery-poster > img {
+              left: 50%;
+              margin-left: -10px;
+              margin-top: -10px;
+              opacity: 0;
+              position: absolute;
+              top: 50%;
+              -webkit-transition: opacity 0.3s ease 0s;
+              -o-transition: opacity 0.3s ease 0s;
+              transition: opacity 0.3s ease 0s;
+            }
+            .demo-gallery > ul > li a:hover .demo-gallery-poster {
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+            .demo-gallery .justified-gallery > a > img {
+              -webkit-transition: -webkit-transform 0.15s ease 0s;
+              -moz-transition: -moz-transform 0.15s ease 0s;
+              -o-transition: -o-transform 0.15s ease 0s;
+              transition: transform 0.15s ease 0s;
+              -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+              height: 100%;
+              width: 100%;
+            }
+            .demo-gallery .justified-gallery > a:hover > img {
+              -webkit-transform: scale3d(1.1, 1.1, 1.1);
+              transform: scale3d(1.1, 1.1, 1.1);
+            }
+            .demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
+              opacity: 1;
+            }
+            .demo-gallery .justified-gallery > a .demo-gallery-poster {
+              background-color: rgba(0, 0, 0, 0.1);
+              bottom: 0;
+              left: 0;
+              position: absolute;
+              right: 0;
+              top: 0;
+              -webkit-transition: background-color 0.15s ease 0s;
+              -o-transition: background-color 0.15s ease 0s;
+              transition: background-color 0.15s ease 0s;
+            }
+            .demo-gallery .justified-gallery > a .demo-gallery-poster > img {
+              left: 50%;
+              margin-left: -10px;
+              margin-top: -10px;
+              opacity: 0;
+              position: absolute;
+              top: 50%;
+              -webkit-transition: opacity 0.3s ease 0s;
+              -o-transition: opacity 0.3s ease 0s;
+              transition: opacity 0.3s ease 0s;
+            }
+            .demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+            .demo-gallery .video .demo-gallery-poster img {
+              height: 48px;
+              margin-left: -24px;
+              margin-top: -24px;
+              opacity: 0.8;
+              width: 48px;
+            }
+            .demo-gallery.dark > ul > li a {
+              border: 3px solid #04070a;
+            }
+            .home .demo-gallery {
+              padding-bottom: 80px;
+            }
+            /*navbar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+        </style>
+        <style type="text/css">
+  .navbar-default .navbar-nav>li>a{
+  color: black;
+  font-family: italic;
+}
+.abc{
+  color: black;
+  font-family: italic;
+
+}
+    .bs-example{
+      margin: 20px;
+    }
+    .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+.circle {
+    background: #fff;
+    padding: 7px;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    border: solid 4px #48a2df;
+    margin: 20px auto;
+    text-align: center;
+}
+.fadeInUpBig {
+    -webkit-animation-name: fadeInUpBig;
+    animation-name: fadeInUpBig;
+}
+
+.side-bar {
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.fa-phone:before {
+    content: "\f095";
+    box-sizing:border-box;
+color:rgb(72, 162, 223);
+display:inline-block;
+font-family:FontAwesome;
+font-size:35px;
+font-stretch:normal;
+font-style:normal;
+font-variant-caps:normal;
+font-variant-ligatures:normal;
+font-variant-numeric:normal;
+font-weight:normal;
+height:35px;
+line-height:35px;
+text-align:center;
+text-rendering:auto;
+text-size-adjust:100%;
+visibility:visible;
+width:27.5px;
+-webkit-font-smoothing:antialiased;
+-webkit-tap-highlight-color:rgba(0, 0, 0, 0)
+
+}
+.fa-map-marker:before {
+    
+    box-sizing:border-box;
+color:rgb(72, 162, 223);
+display:inline-block;
+font-family:FontAwesome;
+font-size:35px;
+font-stretch:normal;
+font-style:normal;
+font-variant-caps:normal;
+font-variant-ligatures:normal;
+font-variant-numeric:normal;
+font-weight:normal;
+height:35px;
+line-height:35px;
+text-align:center;
+text-rendering:auto;
+text-size-adjust:100%;
+visibility:visible;
+width:27.5px;
+
+
+}
+.fa-link:before {
+    
+    box-sizing:border-box;
+color:rgb(72, 162, 223);
+display:inline-block;
+font-family:FontAwesome;
+font-size:35px;
+font-stretch:normal;
+font-style:normal;
+font-variant-caps:normal;
+font-variant-ligatures:normal;
+font-variant-numeric:normal;
+font-weight:normal;
+height:35px;
+line-height:35px;
+text-align:center;
+text-rendering:auto;
+text-size-adjust:100%;
+visibility:visible;
+width:27.5px;
+
+
+}
+
+</style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </head>
+    <body class="home">
+ <ul class="nav navbar-nav" style="text-color:black">
+                
+                <li><a href="../index.html"><h3 style="padding:0;margin:0">Home</h3></a></li>
+                <li><a href="../about.html"><h3 style="padding:0;margin:0">About</h3></a></li>
+                <li><a href="../features.html"><h3 style="padding:0;margin:0">Features</h3></a></li>
+                <li><a href="#"><h3 style="padding:0;margin:0">Gallery</h3></a></li>
+            </ul>
+        <div class="demo-gallery" style="padding-left:2%;padding-right:2%">
+            <ul id="lightgallery" class="list-unstyled row">
+               
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/51.jpg 375, img/51.jpg 480, img/51.jpg 800" data-src="img/51.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/51.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/52.jpg 375, img/52.jpg 480, img/52.jpg 800" data-src="img/52.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/52.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/53.jpg 375, img/53.jpg 480, img/53.jpg 800" data-src="img/53.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/53.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/54.jpg 375, img/54.jpg 480, img/54.jpg 800" data-src="img/54.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/54.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/55.jpg 375, img/55.jpg 480, img/55.jpg 800" data-src="img/55.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/55.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/56.jpg 375, img/56.jpg 480, img/56.jpg 800" data-src="img/56.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/56.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/57.jpg 375, img/57.jpg 480, img/57.jpg 800" data-src="img/57.jpg">
+                    <a href="">
+                        <img class="img-responsive" src="img/57.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/58.jpg 375, img/58.jpg 480, img/58.jpg 800" data-src="img/58.jpg">
+                    <a href="">
+                        <img class="img-responsive" src="img/58.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/59.jpg 375, img/59.jpg 480, img/59.jpg 800" data-src="img/59.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/59.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/60.jpg 375, img/60.jpg 480, img/60.jpg 800" data-src="img/60.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/60.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/61.jpg 375, img/61.jpg 480, img/61.jpg 800" data-src="img/61.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/61.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/62.jpg 375, img/62.jpg 480, img/62.jpg 800" data-src="img/62.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/62.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/63.jpg 375, img/63.jpg 480, img/63.jpg 800" data-src="img/63.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/63.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/64.jpg 375, img/64.jpg 480, img/64.jpg 800" data-src="img/64.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/64.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/65.jpg 375, img/65.jpg 480, img/65.jpg 800" data-src="img/65.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/65.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/66.jpg 375, img/66.jpg 480, img/66.jpg 800" data-src="img/66.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/66.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/67.jpg 375, img/67.jpg 480, img/67.jpg 800" data-src="img/67.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/67.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/68.jpg 375, img/68.jpg 480, img/68.jpg 800" data-src="img/68.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/68.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/69.jpg 375, img/69.jpg 480, img/69.jpg 800" data-src="img/69.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/69.jpg">
+                    </a>
+                </li>
+                 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/70.jpg 375, img/70.jpg 480, img/70.jpg 800" data-src="img/70.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/70.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/71.jpg 375, img/71.jpg 480, img/71.jpg 800" data-src="img/71.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/71.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/72.jpg 375, img/72.jpg 480, img/72.jpg 800" data-src="img/72.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/72.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/73.jpg 375, img/73.jpg 480, img/73.jpg 800" data-src="img/73.jpg" >
+                    <a href="">
+                        <img class="img-responsive" src="img/73.jpg">
+                    </a>
+                </li>
+                
+
+
+            </ul>
+        </div>
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('#lightgallery').lightGallery();
+        });
+        </script>
+        <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+        <script src="../dist/js/lightgallery-all.min.js"></script>
+        <script src="../lib/jquery.mousewheel.min.js"></script>
+    </body>
+</html>
